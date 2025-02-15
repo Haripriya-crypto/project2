@@ -1,0 +1,60 @@
+.slider-container {
+    width: 80%; /* Adjust as needed */
+    margin: 50px auto;
+    overflow: hidden; /* Hide content that overflows the container */
+    position: relative; /* For positioning navigation buttons */
+}
+
+.slider {
+    display: flex; /* Arrange slides horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full container width */
+    position: relative; /* For positioning caption and description */
+}
+
+.slide img {
+    width: 100%;
+    display: block; /* Prevents a small space below the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.caption {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+}
+
+.description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    font-size: smaller;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center buttons */
+}
+
+.navigation button {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 95%;
+    }
+}
